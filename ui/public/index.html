@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='viewport' content='width=device-width, height=device-height, initial-scale:1, user-scalable=no'/>
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>Flow's Got Talent</title>
+    <style>
+        img.preload-logo {
+            margin: auto;
+            display: block;
+            width: 200px;
+            padding-bottom: 20px;
+        }
+
+        p.preload-text {
+            font-family: 'Tilt Neon', "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-align: center;
+            margin: 30px;
+            color: #dec4f5;
+        }
+
+        .loader-overlay {
+            background: #8a49ba;
+            background: -moz-radial-gradient(circle, #956cb1 32%, #8a49ba 77%);
+            background: -webkit-radial-gradient(circle, #956cb1 32%, #8a49ba 77%);
+            background: radial-gradient(circle, #956cb1 32%, #8a49ba 77%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#956cb1", endColorstr="#8a49ba", GradientType=1);
+            height: 100%;
+            width: 100%;
+            transition: opacity .5s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .loader-container {
+            height: 75px;
+            width: 250px;
+            margin: 0 auto;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+
+        .block1, .block2, .block3, .block4 {
+            height: 50px;
+            width: 12px;
+            background-color: #dec4f5;
+            display: inline-block;
+            transform: translateY(25px);
+        }
+
+        @keyframes blockMove {
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .block1 {
+            margin-left: 90px;
+            animation: blockMove .5s ease infinite alternate;
+        }
+
+        .block2 {
+            animation: blockMove .5s ease .08s infinite alternate;
+        }
+
+        .block3 {
+            animation: blockMove .5s ease .16s infinite alternate;
+        }
+
+        .block4 {
+            animation: blockMove .5s ease .24s infinite alternate;
+        }
+
+    </style>
+</head>
+<body>
+<noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+</noscript>
+<div id="app">
+    <div class="loader-overlay">
+        <div class="loader-container">
+            <img src="/logo.png" class="preload-logo"/>
+            <div class="block1"></div>
+            <div class="block2"></div>
+            <div class="block3"></div>
+            <div class="block4"></div>
+            <p class="preload-text">Loading...</p>
+        </div>
+    </div>
+</div>
+<!-- built files will be auto injected -->
+<script src='https://cdn.rawgit.com/mrdoob/three.js/r89/build/three.js'></script>
+<script src='https://cdn.rawgit.com/mrdoob/three.js/r89/examples/js/controls/OrbitControls.js'></script>
+<script src='https://cdn.rawgit.com/mrdoob/three.js/r89/examples/js/loaders/FBXLoader.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js'></script>
+</body>
+</html>

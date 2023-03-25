@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tower Blocks</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<meta name="viewport" content="width=device-width,user-scalable=no">
+
+<div id="container">
+    <div id="game"></div>
+    <div id="score">0</div>
+    <div id="instructions">Click to place the block</div>
+    <div class="game-over">
+        <h2>Game Over</h2>
+        <p>You need to score 12 points to proceed.</p>
+        <p>Click to start again</p>
+    </div>
+    <div class="game-ready">
+        <div id="start-button">Start</div>
+        <div></div>
+    </div>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+        integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
